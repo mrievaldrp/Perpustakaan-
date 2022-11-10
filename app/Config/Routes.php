@@ -48,7 +48,7 @@ $routes->group('login', function(RouteCollection $routes){
     $routes->patch('/', 'PustawakanController::lupaPassword');
 });
 
-$routes->group('pustakawan', function(RouteCollection $routes){
+$routes->group('pustakawan',['filter' => 'otentikasi'],function(RouteCollection $routes){
     $routes->get('/', 'PustakawanController::index');
     $routes->post('/', 'PustakawanController::store');
     $routes->patch('/', 'PustakawanController::update');
