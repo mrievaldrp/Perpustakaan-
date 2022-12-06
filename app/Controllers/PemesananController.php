@@ -13,7 +13,7 @@ use CodeIgniter\HTTP\Message;
 class PemesananController extends BaseController
 {
     public function index(){
-        return view('Pemesanan/table');
+        return view('backend/Pemesanan/table');
     }
 
     public function all(){

@@ -13,14 +13,14 @@ class TransaksiController extends BaseController
 {
     public function index()
     {
-        return view('Transaksi/table');
+        return view('backend/Transaksi/table');
     }
 
     public function all(){
         $pm = new TransaksiModel();
-        $pm->select ('id, tgl_pinjam, tgl_harus_kembali, anggota_id, stokkoleksi_id, pustakawan_id, kembali_pustakawan_id, denda, status_trx, catatan');
+        $pm->select ('id, tgl_pinjam, tgl_harus_kembali, anggota_id, stokkoleksi_id, pustakawan_id, kembalipustakawan_id, denda, status_trx, catatan');
        return (new Datatable( $pm ))
-                ->setFieldFilter(['tgl_pinjam', 'tgl_harus_kembali', 'anggota_id', 'stokkoleksi_id', 'pustakawan_id', 'kembali_pustakawan_id', 'denda', 'status_trx', 'catatan'])
+                ->setFieldFilter(['tgl_pinjam', 'tgl_harus_kembali', 'anggota_id', 'stokkoleksi_id', 'pustakawan_id', 'kembalipustakawan_id', 'denda', 'status_trx', 'catatan'])
                 ->draw();     
     }
     
@@ -37,7 +37,7 @@ class TransaksiController extends BaseController
                 'anggota_id'            => $this->request->getVar('anggota_id'),
                 'stokkoleksi_id'        => $this->request->getVar('stokkoleksi_id'),
                 'pustakawan_id'         => $this->request->getVar('pustakawan_id'),
-                'kembali_pustakawan_id' => $this->request->getVar('kembali_pustakawan_id'),
+                'kembalipustakawan_id' => $this->request->getVar('kembali_pustakawan_id'),
                 'denda'                 => $this->request->getVar('denda'),
                 'status_trx'            => $this->request->getVar('status_trx'),
                 'catatan'               => $this->request->getVar('catatan'),
@@ -58,7 +58,7 @@ class TransaksiController extends BaseController
             'anggota_id'            => $this->request->getVar('anggota_id'),
             'stokkoleksi_id'        => $this->request->getVar('stokkoleksi_id'),
             'pustakawan_id'         => $this->request->getVar('pustakawan_id'),
-            'kembali_pustakawan_id' => $this->request->getVar('kembali_pustakawan_id'),
+            'kembalipustakawan_id' => $this->request->getVar('kembali_pustakawan_id'),
             'denda'                 => $this->request->getVar('denda'),
             'status_trx'            => $this->request->getVar('status_trx'),
             'catatan'               => $this->request->getVar('catatan'),

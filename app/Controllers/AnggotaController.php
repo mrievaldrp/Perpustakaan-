@@ -13,7 +13,7 @@ class AnggotaController extends BaseController
 {
     public function index()
     {
-        return view('Anggota/table');
+        return view('backend/Anggota/table');
     }
 
     public function all(){

@@ -18,10 +18,10 @@ class AnggotaSeeder extends Seeder
             'kota'          =>'Pontianak',
             'gender'        =>'L',
             'foto'          =>'-',
-            'tgl_daftar'    =>'17 Oktober 2021',
+            'tgl_daftar'    =>'2017-11-11',
             'status_aktif'  =>'A',
-            'berlaku_awal'  =>'20 Oktober 2021',
-            'berlaku_akhir' =>'20 Oktober 2023',
+            'berlaku_awal'  =>'2017-11-11',
+            'berlaku_akhir' =>'2023-11-11',
 
         ]);
         echo"hasil id =$r";
