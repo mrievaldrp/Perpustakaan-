@@ -13,11 +13,11 @@ use CodeIgniter\HTTP\Message;
 class PemesananController extends BaseController
 {
     public function index(){
-        return view('Pemesanan/table');
+        return view('backend/Pemesanan/table');
     }
 
     public function all(){
-        $pm = new PemesananModel();
+        $pm = new PemesananModel();  
         $pm->select('id, tgl_awal, tgl_akhir, koleksi_id, anggota_id, status_pesan');
 
         return (new Datatable( $pm ))

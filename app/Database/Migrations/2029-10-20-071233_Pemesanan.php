@@ -16,7 +16,7 @@ class Pemesanan extends Migration
             'anggota_id'    =>[ 'type'=>'int','constraint'=> 10,'unsigned'=>true ],          
             'status_pesan'  =>[ 'type'=>'enum("B","O","X","H")' ],
             'created_at'    =>[ 'type'=>'datetime','null'=>true ],
-            'update_at'     =>[ 'type'=>'datetime','null'=>true ],
+            'updated_at'     =>[ 'type'=>'datetime','null'=>true ],  
             'deleted_at'    =>[ 'type'=>'datetime','null'=>true ],
 
         ]);

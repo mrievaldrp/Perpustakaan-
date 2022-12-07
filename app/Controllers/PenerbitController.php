@@ -14,7 +14,7 @@ class PenerbitController extends BaseController
 {
     public function index()
     {
-        return view('Penerbit/table');
+        return view('backend/Penerbit/table');
     }
 
     public function all()
@@ -60,7 +60,7 @@ class PenerbitController extends BaseController
 
     public function delete(){
         $pm     = new PenerbitModel();
-        $id     = $this->request->getVar('id');
+        $id     = $this->request->getVar('id');  
         $hasil  = $pm->delete($id);
         return $this->response->setJSON(['result' => $hasil ]);
     }

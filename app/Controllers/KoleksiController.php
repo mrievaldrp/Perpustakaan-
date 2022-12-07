@@ -9,11 +9,11 @@ use CodeIgniter\Email\Email;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\Message;
 
-class KoleksiController extends BaseController
+class KoleksiController extends BaseController  
 {
     public function index()
     {
-        return view('Koleksi/table');
+        return view('backend/Koleksi/table');
     }
 
     public function all()

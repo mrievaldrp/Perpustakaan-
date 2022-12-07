@@ -36,7 +36,7 @@ class PustakawanController extends BaseController
     }
    
     public function viewLogin(){
-        return view('login');
+        return view('backend/login');
     }
 
     public function lupaPassword()
@@ -87,7 +87,7 @@ class PustakawanController extends BaseController
     }
 
     public function index(){
-        return view('Pustakawan1/table');
+        return view('backend/Pustakawan1/table');  
     }
 
     public function all(){

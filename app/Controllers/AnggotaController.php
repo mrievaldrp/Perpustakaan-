@@ -9,16 +9,16 @@ use CodeIgniter\Email\Email;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\Message;
 
-class AnggotaController extends BaseController
+class AnggotaController extends BaseController  
 {
     public function index()
     {
-        return view('Anggota/table');
+        return view('backend/Anggota/table');
     }
 
     public function all(){
         $pm = new AnggotaModel();
-        $pm->select('id, nama_depan, nama_belakang, email, nohp, alamat, kota, gender, tgl_daftar, status_aktif, berlaku_awal, berlaku_akhir');
+        $pm->select('id, nama_depan, nama_belakang, email, nohp, alamat, kota, gender, tgl_daftar,foto, status_aktif, berlaku_awal, berlaku_akhir');
 
         return (new Datatable( $pm))
                 ->setFieldFilter(['nama_depan', 'nama_belakang', 'email', 'nohp', 'alamat', 'kota', 'gender', 'tgl_daftar', 'status_aktif', 'berlaku_awal', 'berlaku_akhir'])
@@ -47,6 +47,10 @@ class AnggotaController extends BaseController
             'berlaku_awal'  => $this->request->getVar('berlaku_awal'),
             'berlaku_akhir' => $this->request->getVar('berlaku_akhir'),
         ]);
+
+        if($id > 0){
+            $this->simpanFile($id);
+        }
         return $this->response->setJSON(['id' => $id])
                     ->setStatusCode( intval($id) > 0 ? 200 : 406 );
     }
@@ -69,7 +73,16 @@ class AnggotaController extends BaseController
             'berlaku_awal'  => $this->request->getVar('berlaku_awal'),
             'berlaku_akhir' => $this->request->getVar('berlaku_akhir'),
         ]);
+
+        if($hasil == true){
+            $this->simpanFile($id);
+        }
+
         return $this->response->setJSON(['result'=>$hasil]);
+    }
+
+    public function berkas($id){
+        $file = WRITEPATH . 'uploads/anggota/'.$id.'.jpg';
     }
 
     public function delete(){
@@ -78,4 +91,24 @@ class AnggotaController extends BaseController
         $hasil  = $pm->delete($id);
         return $this->response->setJSON(['result' => $hasil ]);
     }
+
+    private function simpanFile($id){
+        $file = $this->request->getFile('berkas');
+
+        if($file->hasMoved() == false){
+            $path = WRITEPATH . 'uploads/anggota/';
+
+            if(!file_exists($path)){
+                @mkdir($path, recursive: true);
+            }
+
+            $path = $file->store(
+                folderName: $path,
+                fileName: "$id.jpg"
+            );
+            return $path;
+        }
+        return null;
+    }
+
 }

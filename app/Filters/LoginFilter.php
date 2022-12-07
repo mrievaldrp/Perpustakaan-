@@ -2,6 +2,9 @@
 
 namespace App\Filters;
 
+
+
+use App\Database\Migrations\Pustakawan;
 use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -9,15 +12,6 @@ use CodeIgniter\HTTP\ResponseInterface;
 class LoginFilter implements FilterInterface
 {
     /**
-     * Do whatever processing this filter needs to do.
-     * By default it should not return anything during
-     * normal execution. However, when an abnormal state
-     * is found, it should return an instance of
-     * CodeIgniter\HTTP\Response. If it does, script
-     * execution will end and that Response will be
-     * sent back to the client, allowing for error pages,
-     * redirects, etc.
-     *
      * @param RequestInterface $request
      * @param array|null       $arguments
      *
@@ -26,10 +20,13 @@ class LoginFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         $p = session('pustakawan');
-        if($p == null){
-            return redirect()->to(site_url('login'));
+            if($p== null){  
+           return redirect()->to(site_url('login'));
         }
+   
+   
     }
+    
 
     /**
      * Allows After filters to inspect and modify the response

@@ -138,6 +138,10 @@ $routes->group('transaksi', function(RouteCollection $routes){
     $routes->get('all', 'TransaksiController::all');
 });
 
+$routes->group('dashboard', function(RouteCollection $routes){
+    $routes->get('/', 'dashboardcontroller::index');
+});
+
 
 
 /*

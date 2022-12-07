@@ -12,7 +12,7 @@ use CodeIgniter\HTTP\Message;
 class StokKoleksiController extends BaseController
 {
     public function index(){
-        return view('StokKoleksi/table');
+        return view('backend/StokKoleksi/table');  
     }
     public function all(){
         $pm =new StokKoleksiModel();

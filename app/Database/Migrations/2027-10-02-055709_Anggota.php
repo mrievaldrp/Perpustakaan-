@@ -16,7 +16,7 @@ class Anggota extends Migration
             'nohp'          =>[ 'type' => 'varchar', 'constraint' => 16],
             'alamat'        =>[ 'type' => 'varchar', 'constraint' => 255],
             'kota'          =>[ 'type' => 'varchar', 'constraint' => 60],
-            'gender'        =>[ 'type' => 'enum("L", "P")', 'default' => 'L' ],
+            'gender'        =>[ 'type' => 'enum("L", "P")', 'default' => 'L' ],  
             'foto'          =>[ 'type' => 'varchar', 'constraint' => 255],
             'tgl_daftar'    =>[ 'type' => 'date', 'null'=>true],
             'status_aktif'  =>[ 'type' => 'enum("A", "N")', 'default' => 'A' ],
