@@ -32,7 +32,7 @@ class TransaksiController extends BaseController
     public function store(){
         $pm = new TransaksiModel();
         $id = $pm->insert([
-                'tgl_pinjam'            => $this->request->getVar('tgl_pinjam'),
+                'tgl_pinjam'            => $this->request->getVar('tgl_pinjam'),  
                 'tgl_harus_kembali'     => $this->request->getVar('tgl_harus_kembali'),
                 'anggota_id'            => $this->request->getVar('anggota_id'),
                 'stokkoleksi_id'        => $this->request->getVar('stokkoleksi_id'),

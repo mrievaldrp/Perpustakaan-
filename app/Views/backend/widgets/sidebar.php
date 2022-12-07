@@ -1,3 +1,7 @@
+<?php
+
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+?>
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -14,12 +18,12 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href='backend/template'>
+    <a class="nav-link" href="<?=site_url('dashboard')?>">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
 
-<!-- Divider -->
+<!-- Divider -->   
 <hr class="sidebar-divider">
 
 <!-- Heading -->
@@ -28,19 +32,10 @@
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>Components</span>
+
+
     </a>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Data Referensi:</h6>
-            <a class="collapse-item" href="<?=site_url('pustakawan')?>">Pustakawan</a>
-            <a class="collapse-item" href="<?=site_url('Transaksi')?>">Transaksi</a>
-        </div>
-    </div>
+    
 </li>
 
 <!-- Nav Item - Utilities Collapse Menu -->
@@ -83,14 +78,13 @@
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
         aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder"></i>
-        <span>Perpustakaan</span>
+        <span>Tampilan</span>
     </a>
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="<?=site_url('login')?>">Logout</a>
-            <h6 class="collapse-header">Kelola Data:</h6>
-            <a class="collapse-item" href="<?=site_url('pustakawan')?>">Pustakawan</a>
+  
         </div>
     </div>
 </li>
@@ -104,12 +98,7 @@
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
 </div>
 
-<!-- Sidebar Message -->
-<div class="sidebar-card d-none d-lg-flex">
-    <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-    <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-    <a class="btn btn-success btn-sm" href="//startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-</div>
+
 
 </ul>
 <!-- End of Sidebar -->

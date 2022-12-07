@@ -19,7 +19,7 @@ class TransaksiSeeder extends Seeder
             'kembalipustakawan_id'  => 1,
             'denda'                  => '2000',
             'status_trx'             => 'R',
-            'catatan'                => 'Buku ini sudah rusak',
+            'catatan'                => 'Buku ini sudah rusak',  
            
 
         ]);

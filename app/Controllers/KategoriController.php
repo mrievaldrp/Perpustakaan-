@@ -13,7 +13,7 @@ class KategoriController extends BaseController
 {
     public function index()
     {
-        return view('backend/Kategori/table');
+        return view('backend/Kategori/table');  
     }
 
     public function all(){

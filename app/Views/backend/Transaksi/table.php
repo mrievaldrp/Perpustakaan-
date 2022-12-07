@@ -38,7 +38,7 @@
                 <input type="hidden" name="_method" />
                 <div class="mb-3">
                     <label class="form-label">Tanggal Pinjam</label>
-                    <input type="date" name="tgl_pinjam" class="form-control" />
+                    <input type="date" name="tgl_pinjam" class="form-control" />    
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Tanggal Harus Kembali</label>

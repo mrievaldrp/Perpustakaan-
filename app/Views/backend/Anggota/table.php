@@ -3,9 +3,9 @@
 <?=$this->section('content')?>
 
 
-<div class="container">
+<div class="container mt-5 ">
     <button class="float-end btn btn-sm btn-primary" id="btn-tambah">Tambah</button>
-
+    <div class="scroll">
     <table id='tabel-pelanggan' class="datatable table table-bordered">
         <thead>
             <tr>
@@ -94,7 +94,7 @@
                         <label class="form-label">Berlaku Akhir</label>
                         <input type="date" name="berlaku_akhir" class="form-control" />
                     </div>
-
+                    <div class="mb-3"   id="fileberkas"></div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -103,7 +103,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <?=$this->endSection()?>
 
 <?=$this->section('script')?>
@@ -113,7 +113,25 @@
 <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
 <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
+<script src="//cdn.jsdelivr.net/gh/JeremyFagis/dropify@master/dist/js/dropify.min.sjs"></script>
+<link href="https://cdn.jsdelivr.net/gh/JeremyFagis/dropify@master/dist/css/dropify.min.css"
+rel="stylesheet" />
+<style>
+    .scroll{
+        height: 400px;
+        overflow: scroll;
+    }
+</style>
+
 <script>
+    function buatDropify(){
+        $('div#fileberkas').html(`<input type="file"
+                                    name="berkas"
+                                    data-allowed-file-extensions="png jpg bmp gif"
+                                    data-default-file="${filename}">`);
+        $('input[name=berkas]').dropify();
+    }
+
     $(document).ready(function(){
         $('form#formAnggota').submitAjax({
             pre:()=>{
@@ -139,6 +157,7 @@
             $('#modalForm').modal('show');
             $('form#formAnggota').trigger('reset');
             $('input[name=_method]').val('');
+            buatDropify();
         });
 
         $('table#tabel-pelanggan').on('click', '.btn-edit',  function(){
@@ -154,6 +173,7 @@
                 $('input[name=kota]').val(e.kota);
                 $('input[name=gender]').val(e.gender);
                 $('input[name=foto]').val(e.foto);
+                
                 $('input[name=tgl_daftar]').val(e.tgl_daftar);
                 $('input[name=status_aktif]').val(e.status_aktif);
                 $('input[name=berlaku_awal]').val(e.berlaku_awal);
@@ -162,6 +182,7 @@
                 $('input[name=_method]').val('patch');
 
             });
+            
         });
 
         $('table#tabel-pelanggan').on('click', '.btn-hapus', function(){
@@ -215,7 +236,7 @@
                     render: (data,type, meta, row)=>{
                     var btnEdit = `<button class='btn-edit btn-warning' data-id='${data}'>Edit</button>`;
                     var btnHapus = `<button class='btn-hapus btn-danger' data-id='${data}'>Hapus</button>`;
-                    return btnEdit + btnHapus;
+                    return btnEdit + btnHapus;  
                     }
                 },
             ]

@@ -20,7 +20,7 @@ class Transaksi extends Migration
             'status_trx'        =>[ 'type' => 'enum("P", "K", "R", "H")', 'default'=>'P' ],
             'catatan'           =>[ 'type' => 'text' ],
             'created_at'        =>[ 'type' => 'datetime', 'null'=>true],
-            'updated_at'        =>[ 'type' => 'datetime', 'null'=>true],
+            'updated_at'        =>[ 'type' => 'datetime', 'null'=>true],  
             'deleted_at'        =>[ 'type' => 'datetime', 'null'=>true]
         ]);
         

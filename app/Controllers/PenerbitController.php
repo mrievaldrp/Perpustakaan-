@@ -60,7 +60,7 @@ class PenerbitController extends BaseController
 
     public function delete(){
         $pm     = new PenerbitModel();
-        $id     = $this->request->getVar('id');
+        $id     = $this->request->getVar('id');  
         $hasil  = $pm->delete($id);
         return $this->response->setJSON(['result' => $hasil ]);
     }

@@ -12,7 +12,7 @@
                 <th>No</th>
                 <th>Nama</th>
                 <th>Kota</th>
-                <th>Negara</th>
+                <th>Negara</th>    
                 <th>Aksi</th>
             </tr>
         </thead>

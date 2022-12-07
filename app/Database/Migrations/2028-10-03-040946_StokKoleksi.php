@@ -15,7 +15,7 @@ class StokKoleksi extends Migration
             'status_tersedia'   =>[ 'type' => 'enum("A", "P", "R", "H")', 'default' => 'A' ],
             'anggota_id'        =>[ 'type' => 'int', 'constraint' => 10, 'unsigned'=>true ],
             'pustakawan_id'     =>[ 'type' => 'int', 'constraint' => 10, 'unsigned'=>true ],
-            'created_at'        =>[ 'type' => 'datetime', 'null'=>true],
+            'created_at'        =>[ 'type' => 'datetime', 'null'=>true],  
             'updated_at'        =>[ 'type' => 'datetime', 'null'=>true],
             'deleted_at'        =>[ 'type' => 'datetime', 'null'=>true]
         ]);

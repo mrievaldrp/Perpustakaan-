@@ -9,7 +9,7 @@ use CodeIgniter\Email\Email;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\Message;
 
-class KoleksiController extends BaseController
+class KoleksiController extends BaseController  
 {
     public function index()
     {

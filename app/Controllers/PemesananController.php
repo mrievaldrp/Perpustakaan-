@@ -17,7 +17,7 @@ class PemesananController extends BaseController
     }
 
     public function all(){
-        $pm = new PemesananModel();
+        $pm = new PemesananModel();  
         $pm->select('id, tgl_awal, tgl_akhir, koleksi_id, anggota_id, status_pesan');
 
         return (new Datatable( $pm ))

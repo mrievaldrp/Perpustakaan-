@@ -12,7 +12,7 @@
                 <th>Tanggal Akhir</th>
                 <th>Koleksi</th>
                 <th>Anggota</th>
-                <th>Status Pesan</th>
+                <th>Status Pesan</th>    
                 <th>Aksi</th>
             </tr>
         </thead>

@@ -11,7 +11,7 @@
                 <th>No</th>
                 <th>Koleksi</th>
                 <th>Nomor</th>
-                <th>Status tersedia</th>
+                <th>Status tersedia</th>   
                 <th>Anggota</th>
                 <th>Pustakawan</th>
                 <th>Aksi</th>

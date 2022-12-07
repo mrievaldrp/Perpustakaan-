@@ -9,7 +9,7 @@ use CodeIgniter\Email\Email;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\Message;
 
-class BahasaController extends BaseController
+class BahasaController extends BaseController  
 {
     public function index()
     {
