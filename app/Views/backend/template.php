@@ -21,7 +21,12 @@
     <link href="<?=base_url('assets')?>/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
+<style class="text/css">
+body{
+    background: url(<?=base_url('assets/img/back.jpg')?>);
+    background-size: cover;
+}
+</style>
 <body id="page-top">
   
     <!-- Page Wrapper -->

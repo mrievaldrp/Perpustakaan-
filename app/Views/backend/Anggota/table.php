@@ -2,12 +2,17 @@
 
 <?=$this->section('content')?>
 
-
+<style class="text/css">
+body{
+    background: url(<?=base_url('assets/img/back.jpg')?>);
+    background-size: cover;
+}
+</style>
 <div class="container mt-5 ">
     <button class="float-end btn btn-sm btn-primary" id="btn-tambah">Tambah</button>
-    <div class="scroll">
-    <table id='tabel-pelanggan' class="datatable table table-bordered">
-        <thead>
+    <div class="table-responsive">
+    <table id='tabel-pelanggan' class="datatable table-info table-bordered" >
+        <thead class="table-dark">
             <tr>
                 <th>No</th>
                 <th>Nama Depan</th>
@@ -117,10 +122,7 @@
 <link href="https://cdn.jsdelivr.net/gh/JeremyFagis/dropify@master/dist/css/dropify.min.css"
 rel="stylesheet" />
 <style>
-    .scroll{
-        height: 400px;
-        overflow: scroll;
-    }
+  
 </style>
 
 <script>
@@ -163,7 +165,7 @@ rel="stylesheet" />
         $('table#tabel-pelanggan').on('click', '.btn-edit',  function(){
             let id = $(this).data('id');
             let baseurl = "<?=base_url()?>";
-            $.get(`${baseurl}/anggota/${id}`).done((e)=>{
+                $.get(`${baseurl}/anggota/${id}`).done((e)=>{
                 $('input[name=id]').val(e.id);
                 $('input[name=nama_depan]').val(e.nama_depan);
                 $('input[name=nama_belakang]').val(e.nama_belakang);
@@ -173,7 +175,7 @@ rel="stylesheet" />
                 $('input[name=kota]').val(e.kota);
                 $('input[name=gender]').val(e.gender);
                 $('input[name=foto]').val(e.foto);
-                
+                buatDropify(e?.filename ?? '');
                 $('input[name=tgl_daftar]').val(e.tgl_daftar);
                 $('input[name=status_aktif]').val(e.status_aktif);
                 $('input[name=berlaku_awal]').val(e.berlaku_awal);

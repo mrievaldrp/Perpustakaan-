@@ -5,8 +5,8 @@
 <div class="container">
     <button class="float-end btn btn-sm btn-primary" id="btn-tambah">Tambah</button>
 
-    <table id='tabel-pelanggan' class="datatable table-bordered">
-        <thead>
+    <table id='tabel-pelanggan' class="datatable table-info table-bordered" >
+        <thead class="table-dark">
             <tr>
                 <th>No</th>
                 <th>Judul</th>
