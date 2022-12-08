@@ -119,8 +119,7 @@
                     <div class="status-indicator bg-success"></div>
                 </div>
                 <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                        problem I've been having.</div>
+                    <div class="text-truncate">Bagi link BOKEP dong bro</div>
                     <div class="small text-gray-500">Emily Fowler · 58m</div>
                 </div>
             </a>
@@ -170,9 +169,9 @@
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-            <img class="img-profile rounded-circle"
-                src="img/undraw_profile.svg">
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pustaka Kota</span>
+            <!-- <img src="<?=base_url('assets/img/image1.png')?>" alt=""></img> -->
+              
         </a>
         <!-- Dropdown - User Information -->
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

@@ -1,6 +1,7 @@
 <?=$this->extend('backend/template')?>
 
 <?=$this->section('content')?>
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -25,7 +26,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-area">
-                        <img src="<?=base_url('assets/img/cccc.jpg')?>" width="475" height="320" alt=""></img>
+                        <img src="<?=base_url('assets/img/cccc.jpg')?>" width="350" height="320" alt=""></img>
                     </div>
                 </div>
             </div>
@@ -66,12 +67,12 @@
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Kenyamanan Hotel</h6>
+            <h6 class="m-0 font-weight-bold text-dark">Kuota Peminjaman Buku Hari ini</h6>
         </div>
         <div class="card-body">
-            <h4 class="small font-weight-bold"><span class="float-right">100%</span></h4>
+            <h4 class="small font-weight-bold"><span class="float-right">78%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
             </div>
 

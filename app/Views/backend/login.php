@@ -22,8 +22,13 @@
     <link href="<?=base_url('assets')?>/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
-<body class="bg-gradient-primary">
+<style class="text/css">
+body{
+    background: url(<?=base_url('assets/img/back.jpg')?>);
+    background-size: cover;
+}
+</style>
+<body>
 
     <div class="container">
 
